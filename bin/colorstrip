@@ -53,10 +53,12 @@ for mode in ${modes}; do
 		both)   bold=';1'; bright='9';;
 	esac
 
+	spectrum_ansi_code=''
+
 	for color in ${colors}; do
 		ansi_code="${bold}${spectrum_ansi_code};${bright}${color}"
 
-		colorstrip="${colorstrip}\033[0${ansi_code:-${spectrum}}m${spectrum_string:-${string}}"
+		colorstrip="${colorstrip}\033[0${ansi_code}m${spectrum_string:-${string}}"
 
 		[ -n "${spectrum_string}" ] && spectrum_ansi_code=";$(( bright + 1 ))${color}"
 	done
