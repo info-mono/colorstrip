@@ -1,0 +1,67 @@
+#!/bin/sh
+
+string="███"
+modes="normal both"
+colors="0 1 2 3 4 5 6 7"
+
+# TODO
+help='
+'
+
+while :; do
+	case "${1:-}" in
+		-s|--string)
+			shift
+			string="${1}"
+			shift
+		;;
+		-S|--spectrum)
+			shift
+			spectrum_string="${1}"
+			shift
+		;;
+		-m|--modes)
+			shift
+			modes="${1}"
+			shift
+		;;
+		-c|--colors)
+			shift
+			colors="${1}"
+			shift
+		;;
+		-h|--help)
+			printf '%s' "${help}"
+			exit 0
+		;;
+		'')
+			break
+		;;
+		*)
+			printf '%s\n' "Unknown option: ${1}" >&2
+			exit 2
+		;;
+	esac
+done
+
+
+for mode in ${modes}; do
+	case "${mode}" in
+		normal) bold=''  ; bright='3';;
+		bright) bold=''  ; bright='9';;
+		bold)   bold=';1'; bright='3';;
+		both)   bold=';1'; bright='9';;
+	esac
+
+	for color in ${colors}; do
+		ansi_code="${bold}${spectrum_ansi_code};${bright}${color}"
+
+		colorstrip="${colorstrip}\033[0${ansi_code:-${spectrum}}m${spectrum_string:-${string}}"
+
+		[ -n "${spectrum_string}" ] && spectrum_ansi_code=";$(( bright + 1 ))${color}"
+	done
+
+	colorstrip="${colorstrip}\033[0m\n"
+done
+
+printf '%b' "$colorstrip"
