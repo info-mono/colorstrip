@@ -8,7 +8,7 @@
 
 ## 💡 About
 
-<img align="right" src="https://user-images.githubusercontent.com/43980777/185736851-30ab76c7-8f8c-4398-a9e4-3a91af18feaf.png">
+<img align="right" src="https://user-images.githubusercontent.com/43980777/185737381-12f63626-ca8a-4200-8c3d-979d7ee0f40c.png">
 
 **ColorStrip** is a tool to generate color strip (for e.g: fetch tool) written in POSIX-shell.
 
