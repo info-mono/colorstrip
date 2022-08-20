@@ -10,6 +10,9 @@
     default: '0 1 2 3 4 5 6 7',
     'spectrum': '0 7 1 3 2 6 4 5',
     'simple-spectrum': '1 3 2 6 4 5',
+    'reverse': '7 6 5 4 3 2 1 0',
+    'reverse-spectrum': '5 4 6 2 3 1 7 0',
+    'reverse-simple-spectrum': '5 4 6 2 3 1',
   }.each do |colors_name, colors|
     {
       'block1': [false, '█'],
@@ -89,7 +92,7 @@
       'small-stair-transition': [true, '▂▄▆'],
     }.each do |string_name, string|
       filename = [string_name, modes_name, colors_name].select { _1 != :default }.join('_')
-      `#{__dir__}/bin/colortest -string '#{string[1]}' -modes '#{modes}' -colors '#{colors}' --#{string[0] ? '' : 'no-'}transition | tee #{__dir__}/docs/#{filename}`
+      puts `#{__dir__}/bin/colorstrip --string '#{string[1]}' --modes '#{modes}' --colors '#{colors}' --#{string[0] ? '' : 'no-'}transition | tee #{__dir__}/docs/#{filename}`
     end
   end
 end
