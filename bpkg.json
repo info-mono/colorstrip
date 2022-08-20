@@ -1,0 +1,9 @@
+{
+  "name": "colorstrip",
+  "version": "1.0.0",
+  "description": "Color strip generator",
+  "global": "true",
+  "scripts": ["bin/colorstrip"],
+  "files": ["man/colorstrip.1"],
+  "install": "make install"
+}

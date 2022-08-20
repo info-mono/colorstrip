@@ -1,0 +1,32 @@
+.TH COLORSTRIP "1" "2022" "INFO MONO" "User Commands"
+.SH NAME
+ColorStrip \- Color strip generator
+.SH SYNOPSIS
+.B colorstrip <option>
+.SH DESCRIPTION
+ColorStrip is a tool to generate color strip for fetch tool
+.SH OPTIONS
+\fB\-h, \-\-help\fR
+Print help message.
+.TP
+\fB\-s, \-\-string\fR <string>
+Set print string.
+.TP
+\fB\-m, \-\-modes\fR <modes>
+Set modes list (separated by space).
+.IP
+Available modes: normal, bright, bold, both.
+.TP
+\fB\-c, \-\-colors\fR <colors>
+Set colors list (separated by space).
+.IP
+Available colors: 0 (black), 1 (red), 2 (green), 3 (yellow), 4 (blue), 5 (magenta), 6 (cyan), 7 (white).
+.TP
+\fB\-t, \-\-transition\fR
+Enable transition.
+.TP
+\fB\-T, \-\-no\-transition\fR
+Disable transition.
+.TP
+.SH REPORTING BUGS
+Report bugs to https://github.com/info-mono/colorstrip/issues

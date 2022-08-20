@@ -12,10 +12,10 @@ Color strip generator.
 \033[1mOptions:\033[0m
   -h, --help               Print this help message
   -s, --string <string>    Set print string
-  -m, --modes  <modes>     Set modes list (normal, bright, bold, both)
+  -m, --modes <modes>      Set modes list (normal, bright, bold, both)
   -c, --colors <colors>    Set colors list (0, 1, 2, 3, 4, 5, 6, 7)
   -t, --transition         Enable transition
-  -T, --no-transition      Enable transition
+  -T, --no-transition      Disable transition
 
 \033[3;37mList are separated by space.\033[0m'
 
