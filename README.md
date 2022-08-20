@@ -1,11 +1,14 @@
 <h1 align="center">ColorStrip</h1>
 <p align="center">Color strip generator</p>
+<p align="center"><a href="https://github.com/info-mono/colorstrip"><img src="https://user-images.githubusercontent.com/43980777/185734792-4ad807a9-e5b9-4ede-9536-52a849cfaeee.png"></a></p>
 <p align="center">
   <a href="https://github.com/info-mono/colorstrip/blob/main/LICENSE"><img src="https://img.shields.io/github/license/info-mono/colorstrip?labelColor=383838&color=585858&style=for-the-badge" alt="License: GPL-3.0"></a>
   <a href="https://gist.github.com/NNBnh/9ef453aba3efce26046e0d3119dab5a7#development-completed"><img src="https://img.shields.io/badge/development-completed-%23585858.svg?labelColor=383838&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></a>
 </p>
 
 ## 💡 About
+
+<img align="right" src="https://user-images.githubusercontent.com/43980777/185736851-30ab76c7-8f8c-4398-a9e4-3a91af18feaf.png">
 
 **ColorStrip** is a tool to generate color strip (for e.g: fetch tool) written in POSIX-shell.
 
