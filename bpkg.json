@@ -1,6 +1,6 @@
 {
   "name": "colorstrip",
-  "version": "1.0.0",
+  "version": "v1.0.0",
   "description": "Color strip generator",
   "global": "true",
   "scripts": ["bin/colorstrip"],
